@@ -1,0 +1,25 @@
+disabled_rules:
+  - line_length # 1行の文字数制限
+excluded:
+  - Carthage
+  - Pods
+identifier_name:
+  excluded:
+    - id
+    - w
+    - h
+    - x
+    - y
+    - z
+  allowed_symbols:
+    - _
+  min_width: 3
+type_name:
+  max_length:
+    warning: 50
+    error: 80
+force_try: warning
+force_cast: warning 
+large_tuple: 
+  - 4 #warning
+  - 6 #error
