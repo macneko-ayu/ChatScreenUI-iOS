@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ChatScreenViewController.swift
 //  ChatScreenUI-iOS
 //
 //  Created by 横田孝次郎 on 2018/12/08.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChatScreenViewController: UIViewController {
 
+    @IBOutlet private weak var InputMessageView: InputMessageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
