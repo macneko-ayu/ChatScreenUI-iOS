@@ -47,6 +47,8 @@
                                 <constraint firstAttribute="width" constant="30" id="fJ7-xm-dns"/>
                             </constraints>
                             <state key="normal" backgroundImage="button-send-disable"/>
+                            <state key="selected" backgroundImage="button-send-enable"/>
+                            <state key="highlighted" backgroundImage="button-send-enable"/>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mkA-bw-Cbr">
                             <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -55,7 +57,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dm6-FT-JR7">
-                                            <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                            <rect key="frame" x="0.0" y="6.5" width="315" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -73,8 +75,8 @@
                                         <constraint firstItem="A4h-1j-3ue" firstAttribute="centerY" secondItem="iL9-he-TJd" secondAttribute="centerY" id="Qww-DP-GKZ"/>
                                         <constraint firstItem="Dm6-FT-JR7" firstAttribute="leading" secondItem="iL9-he-TJd" secondAttribute="leading" id="W48-d4-Arz"/>
                                         <constraint firstItem="A4h-1j-3ue" firstAttribute="leading" secondItem="iL9-he-TJd" secondAttribute="leading" constant="10" id="hKw-W4-IAK"/>
-                                        <constraint firstAttribute="bottom" secondItem="Dm6-FT-JR7" secondAttribute="bottom" id="kvS-H6-HVY"/>
-                                        <constraint firstItem="Dm6-FT-JR7" firstAttribute="top" secondItem="iL9-he-TJd" secondAttribute="top" id="xdk-be-WiT"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dm6-FT-JR7" secondAttribute="bottom" constant="6.5" id="kvS-H6-HVY"/>
+                                        <constraint firstItem="Dm6-FT-JR7" firstAttribute="top" secondItem="iL9-he-TJd" secondAttribute="top" constant="6.5" id="xdk-be-WiT"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -113,5 +115,6 @@
     </objects>
     <resources>
         <image name="button-send-disable" width="36" height="36"/>
+        <image name="button-send-enable" width="36" height="36"/>
     </resources>
 </document>

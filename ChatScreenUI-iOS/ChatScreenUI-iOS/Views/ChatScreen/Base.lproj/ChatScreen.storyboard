@@ -53,6 +53,7 @@
                     <navigationItem key="navigationItem" id="Thc-1U-WIk"/>
                     <connections>
                         <outlet property="InputMessageView" destination="2dC-1Y-7qG" id="7Gk-6V-MG8"/>
+                        <outlet property="inputVIewHeightConstraint" destination="ZJj-ok-QiW" id="h1R-fF-lLE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

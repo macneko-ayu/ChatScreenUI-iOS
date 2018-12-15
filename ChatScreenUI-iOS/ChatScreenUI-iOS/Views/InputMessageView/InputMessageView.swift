@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class InputMessageView: UIView {
 
@@ -22,12 +24,16 @@ class InputMessageView: UIView {
     }
     @IBOutlet weak var textView: UITextView! {
         didSet {
-            let verticalInset = (textView.frame.height - textView.font!.pointSize) / 2
             let horizontalInset: CGFloat = 10
-            textView.textContainerInset = UIEdgeInsets(top: verticalInset, left: horizontalInset, bottom: verticalInset, right: horizontalInset)
+            textView.textContainerInset = UIEdgeInsets(top: 0, left: horizontalInset, bottom: 0, right: horizontalInset)
         }
     }
-    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var sendButton: UIButton! {
+        didSet {
+            sendButton.setImage(UIImage(named: "button-send-disable"), for: .normal)
+            sendButton.setImage(UIImage(named: "button-send-enable"), for: .selected)
+        }
+    }
     @IBOutlet weak var placeholderLabel: UILabel!
 
     override init(frame: CGRect) {
@@ -38,7 +44,7 @@ class InputMessageView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configure()
-    }
+   }
 
     private func configure() {
         let bundle = Bundle(for: type(of: self))
@@ -50,3 +56,4 @@ class InputMessageView: UIView {
         self.addSubview(view)
     }
 }
+
