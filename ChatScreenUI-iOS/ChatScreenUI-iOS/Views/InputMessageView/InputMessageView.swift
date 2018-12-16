@@ -49,6 +49,7 @@ class InputMessageView: UIView {
     private func configure() {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
+        //swiftlint:disable:next force_cast
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
 
         view.frame = self.bounds
@@ -56,4 +57,3 @@ class InputMessageView: UIView {
         self.addSubview(view)
     }
 }
-
