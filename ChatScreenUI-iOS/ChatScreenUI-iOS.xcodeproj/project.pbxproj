@@ -13,6 +13,7 @@
 		552952B421BC038500430C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552952B321BC038500430C9A /* Assets.xcassets */; };
 		552952C221BC038500430C9A /* ChatScreenUI_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552952C121BC038500430C9A /* ChatScreenUI_iOSTests.swift */; };
 		552952CD21BC038500430C9A /* ChatScreenUI_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552952CC21BC038500430C9A /* ChatScreenUI_iOSUITests.swift */; };
+		559DDAB521C6A66300045FD3 /* ChatScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DDAB421C6A66300045FD3 /* ChatScreenViewModel.swift */; };
 		55BC68AE21BCC6CE005AF31E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC68AD21BCC6CE005AF31E /* RxSwift.framework */; };
 		55BC68B021BCC6DD005AF31E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC68AF21BCC6DD005AF31E /* RxCocoa.framework */; };
 		55BC68B521BD14BC005AF31E /* InputMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BC68B421BD14BC005AF31E /* InputMessageView.xib */; };
@@ -50,6 +51,7 @@
 		552952C821BC038500430C9A /* ChatScreenUI-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ChatScreenUI-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		552952CC21BC038500430C9A /* ChatScreenUI_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenUI_iOSUITests.swift; sourceTree = "<group>"; };
 		552952CE21BC038500430C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		559DDAB421C6A66300045FD3 /* ChatScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatScreenViewModel.swift; path = ViewModels/ChatScreenViewModel.swift; sourceTree = "<group>"; };
 		55BC68AD21BCC6CE005AF31E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		55BC68AF21BCC6DD005AF31E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		55BC68B421BD14BC005AF31E /* InputMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputMessageView.xib; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		55D775D921C4A22D00B258C6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				559DDAB421C6A66300045FD3 /* ChatScreenViewModel.swift */,
 				55D775DA21C4A24800B258C6 /* InputMessageViewModel.swift */,
 			);
 			name = ViewModels;
@@ -359,6 +362,7 @@
 				552952AF21BC038300430C9A /* ChatScreenViewController.swift in Sources */,
 				552952AD21BC038300430C9A /* AppDelegate.swift in Sources */,
 				55D775DB21C4A24800B258C6 /* InputMessageViewModel.swift in Sources */,
+				559DDAB521C6A66300045FD3 /* ChatScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

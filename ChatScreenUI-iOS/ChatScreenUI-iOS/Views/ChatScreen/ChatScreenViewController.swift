@@ -15,8 +15,8 @@ class ChatScreenViewController: UIViewController {
     @IBOutlet private weak var inputMessageView: InputMessageView!
     @IBOutlet private weak var inputVIewHeightConstraint: NSLayoutConstraint!
 
-    var viewModel: InputMessageViewModel?
-    let disposeBag = DisposeBag()
+    private var viewModel: ChatScreenViewModel?
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +24,9 @@ class ChatScreenViewController: UIViewController {
     }
 
     private func viewModelSetup() {
-        let viewModel = InputMessageViewModel(inputText: inputMessageView.textView.rx.text.orEmpty.asDriver())
+        let viewModel = ChatScreenViewModel(input: inputMessageView.textView.rx.text.orEmpty.asDriver())
 
-        viewModel.isInputtedMessage.drive(onNext: { [weak self] isInputted in
+        viewModel.inputMessageViewModel.isInputtedMessage.drive(onNext: { [weak self] isInputted in
             guard let self = self else { return }
             self.inputMessageView.sendButton.isEnabled = isInputted
             self.inputMessageView.placeholderLabel.isHidden = isInputted
@@ -41,20 +41,20 @@ class ChatScreenViewController: UIViewController {
             .skip(1)
             .subscribe(onNext: { [weak self] contentSize in
 
-            guard let self = self else { return }
-            guard let contentSizeHeight = contentSize?.height else { return }
+                guard let self = self else { return }
+                guard let contentSizeHeight = contentSize?.height else { return }
 
-            let maxInputViewHeight: CGFloat = UIScreen.main.bounds.height / 4
-            let padding: CGFloat = 27
+                let maxInputViewHeight: CGFloat = UIScreen.main.bounds.height / 4
+                let padding: CGFloat = 27
 
-            if self.inputVIewHeightConstraint.constant < maxInputViewHeight - padding {
-                self.inputVIewHeightConstraint.constant = contentSizeHeight + padding
-            }
+                if self.inputVIewHeightConstraint.constant < maxInputViewHeight - padding {
+                    self.inputVIewHeightConstraint.constant = contentSizeHeight + padding
+                }
 
-            self.view.setNeedsLayout()
-            self.view.layoutIfNeeded()
-        })
-        .disposed(by: disposeBag)
+                self.view.setNeedsLayout()
+                self.view.layoutIfNeeded()
+            })
+            .disposed(by: disposeBag)
 
         self.viewModel = viewModel
     }
