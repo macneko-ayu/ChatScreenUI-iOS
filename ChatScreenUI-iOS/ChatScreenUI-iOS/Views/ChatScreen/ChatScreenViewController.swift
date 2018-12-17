@@ -41,20 +41,20 @@ class ChatScreenViewController: UIViewController {
             .skip(1)
             .subscribe(onNext: { [weak self] contentSize in
 
-            guard let self = self else { return }
-            guard let contentSizeHeight = contentSize?.height else { return }
+                guard let self = self else { return }
+                guard let contentSizeHeight = contentSize?.height else { return }
 
-            let maxInputViewHeight: CGFloat = UIScreen.main.bounds.height / 4
-            let padding: CGFloat = 27
+                let maxInputViewHeight: CGFloat = UIScreen.main.bounds.height / 4
+                let padding: CGFloat = 27
 
-            if self.inputVIewHeightConstraint.constant < maxInputViewHeight - padding {
-                self.inputVIewHeightConstraint.constant = contentSizeHeight + padding
-            }
+                if self.inputVIewHeightConstraint.constant < maxInputViewHeight - padding {
+                    self.inputVIewHeightConstraint.constant = contentSizeHeight + padding
+                }
 
-            self.view.setNeedsLayout()
-            self.view.layoutIfNeeded()
-        })
-        .disposed(by: disposeBag)
+                self.view.setNeedsLayout()
+                self.view.layoutIfNeeded()
+            })
+            .disposed(by: disposeBag)
 
         self.viewModel = viewModel
     }
