@@ -21,6 +21,7 @@
 		55BC68B521BD14BC005AF31E /* InputMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BC68B421BD14BC005AF31E /* InputMessageView.xib */; };
 		55BC68B721BD14DC005AF31E /* InputMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC68B621BD14DC005AF31E /* InputMessageView.swift */; };
 		55D775DB21C4A24800B258C6 /* InputMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D775DA21C4A24800B258C6 /* InputMessageViewModel.swift */; };
+		DBC831DB21C88F180059B8D4 /* UserIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC831DA21C88F180059B8D4 /* UserIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		55D775DA21C4A24800B258C6 /* InputMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputMessageViewModel.swift; path = ViewModels/InputMessageViewModel.swift; sourceTree = "<group>"; };
 		55E350AC21BCB42D00C2B153 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		55E350AF21BCBC0A00C2B153 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		DBC831DA21C88F180059B8D4 /* UserIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				559DDAB721C7FA0100045FD3 /* Message.swift */,
 				559DDAB921C7FD4100045FD3 /* User.swift */,
+				DBC831DA21C88F180059B8D4 /* UserIcon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BC68B721BD14DC005AF31E /* InputMessageView.swift in Sources */,
+				DBC831DB21C88F180059B8D4 /* UserIcon.swift in Sources */,
 				552952AF21BC038300430C9A /* ChatScreenViewController.swift in Sources */,
 				552952AD21BC038300430C9A /* AppDelegate.swift in Sources */,
 				559DDAB821C7FA0100045FD3 /* Message.swift in Sources */,
