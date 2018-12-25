@@ -8,12 +8,21 @@
 
 import Foundation
 
-struct User: Equatable {
-    let id: String
+struct User {
+    
+    let id: Int
     let name: String
+    let icon: UserIcon
 
-    init(id: String, name: String) {
+    init(id: Int, name: String) {
         self.id = id
         self.name = name
+        self.icon = UserIcon(initials: self.name)
+    }
+}
+
+extension User: Equatable {
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.id == rhs.id
     }
 }

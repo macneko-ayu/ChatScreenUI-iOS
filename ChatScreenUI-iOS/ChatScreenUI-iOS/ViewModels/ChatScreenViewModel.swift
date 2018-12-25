@@ -9,11 +9,33 @@
 import RxSwift
 import RxCocoa
 
-struct ChatScreenViewModel {
+class ChatScreenViewModel {
+
+    typealias Input = (
+        inputtingText: Driver<String>,
+        sendButtonTap: Driver<Void>
+    )
 
     let inputMessageViewModel: InputMessageViewModel
+    let messageTableViewModel: MessageTableViewModel
+    let users: [User]
 
-    init(input inputText: Driver<String>) {
-        self.inputMessageViewModel = InputMessageViewModel(input: inputText)
+    init(input: Input,
+         dependency users: [User]) {
+        self.users = users
+        self.inputMessageViewModel = InputMessageViewModel(input: input.inputtingText)
+        self.messageTableViewModel = MessageTableViewModel(
+            input: (
+                sendButtonTap: input.sendButtonTap,
+                inputtedMessage: self.inputMessageViewModel.inputtedMessage
+            ),
+            dependency: self.users[0]
+        )
+    }
+}
+
+extension ChatScreenViewModel {
+    func currentUser() -> User {
+        return users[0]
     }
 }

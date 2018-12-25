@@ -36,16 +36,22 @@ class InputMessageView: UIView {
     }
     @IBOutlet weak var placeholderLabel: UILabel!
 
+    let disposeBag = DisposeBag()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
+        setupRx()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configure()
+        setupRx()
    }
+}
 
+extension InputMessageView {
     private func configure() {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
@@ -55,5 +61,12 @@ class InputMessageView: UIView {
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.addSubview(view)
+    }
+
+    func setupRx() {
+        sendButton.rx.tap.subscribe { [weak self] _ in
+            self?.textView.text = ""
+        }
+        .disposed(by: disposeBag)
     }
 }

@@ -9,9 +9,9 @@
 import Foundation
 
 struct UserIcon {
-    var initials: String
+    let initials: String
 
     init(initials: String = "?") {
-        self.initials = initials
+        self.initials = String(initials.prefix(1))
     }
 }
