@@ -99,18 +99,6 @@ extension ChatScreenViewController {
             })
             .disposed(by: disposeBag)
 
-        inputMessageView.textView.rx.didBeginEditing.asDriver()
-            .drive(onNext: { [weak self] _ in
-                self?.inputMessageView.textView.becomeFirstResponder()
-            })
-            .disposed(by: disposeBag)
-
-        inputMessageView.textView.rx.didEndEditing.asDriver()
-            .drive(onNext: { [weak self] _ in
-                self?.inputMessageView.textView.resignFirstResponder()
-            })
-            .disposed(by: disposeBag)
-
         NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification)
             .subscribe(onNext: { [weak self] notification in
                 guard let self = self else { return }
