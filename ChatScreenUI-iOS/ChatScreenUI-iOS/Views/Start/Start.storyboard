@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1004" y="-84"/>
         </scene>
-        <!--Splash View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="Iq2-8i-Uc8">
             <objects>
-                <viewController id="MLM-fn-TtH" customClass="SplashViewController" customModule="ChatScreenUI_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MLM-fn-TtH" customClass="StartViewController" customModule="ChatScreenUI_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Jc-My-Fo3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

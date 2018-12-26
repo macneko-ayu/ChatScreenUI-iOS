@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		55033AF321CEA9B50022D2B7 /* DependencyInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55033AF221CEA9B50022D2B7 /* DependencyInjectable.swift */; };
-		55033AF721CEA9C40022D2B7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55033AF521CEA9C40022D2B7 /* SplashViewController.swift */; };
-		55033AF821CEA9C40022D2B7 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55033AF621CEA9C40022D2B7 /* Splash.storyboard */; };
+		55033AF721CEA9C40022D2B7 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55033AF521CEA9C40022D2B7 /* StartViewController.swift */; };
+		55033AF821CEA9C40022D2B7 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55033AF621CEA9C40022D2B7 /* Start.storyboard */; };
 		552952AD21BC038300430C9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552952AC21BC038300430C9A /* AppDelegate.swift */; };
 		552952AF21BC038300430C9A /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552952AE21BC038300430C9A /* ChatScreenViewController.swift */; };
 		552952B221BC038300430C9A /* ChatScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552952B021BC038300430C9A /* ChatScreen.storyboard */; };
@@ -49,8 +49,8 @@
 
 /* Begin PBXFileReference section */
 		55033AF221CEA9B50022D2B7 /* DependencyInjectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjectable.swift; sourceTree = "<group>"; };
-		55033AF521CEA9C40022D2B7 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		55033AF621CEA9C40022D2B7 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		55033AF521CEA9C40022D2B7 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		55033AF621CEA9C40022D2B7 /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		552952A921BC038300430C9A /* ChatScreenUI-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChatScreenUI-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		552952AC21BC038300430C9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		552952AE21BC038300430C9A /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
@@ -115,13 +115,13 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		55033AF421CEA9C40022D2B7 /* Splash */ = {
+		55033AF421CEA9C40022D2B7 /* Start */ = {
 			isa = PBXGroup;
 			children = (
-				55033AF621CEA9C40022D2B7 /* Splash.storyboard */,
-				55033AF521CEA9C40022D2B7 /* SplashViewController.swift */,
+				55033AF621CEA9C40022D2B7 /* Start.storyboard */,
+				55033AF521CEA9C40022D2B7 /* StartViewController.swift */,
 			);
-			path = Splash;
+			path = Start;
 			sourceTree = "<group>";
 		};
 		552952A021BC038300430C9A = {
@@ -199,7 +199,7 @@
 		55BC68B221BD1462005AF31E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				55033AF421CEA9C40022D2B7 /* Splash */,
+				55033AF421CEA9C40022D2B7 /* Start */,
 				55BC68B121BD1456005AF31E /* ChatScreen */,
 				55BC68B321BD1494005AF31E /* InputMessageView */,
 				55FEC88021CA917F00ED70E9 /* TextMessageCell */,
@@ -356,7 +356,7 @@
 				552952B421BC038500430C9A /* Assets.xcassets in Resources */,
 				552952B221BC038300430C9A /* ChatScreen.storyboard in Resources */,
 				55FEC88221CA924100ED70E9 /* TextMessageCell.xib in Resources */,
-				55033AF821CEA9C40022D2B7 /* Splash.storyboard in Resources */,
+				55033AF821CEA9C40022D2B7 /* Start.storyboard in Resources */,
 				55BC68B521BD14BC005AF31E /* InputMessageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +427,7 @@
 				552952AF21BC038300430C9A /* ChatScreenViewController.swift in Sources */,
 				552952AD21BC038300430C9A /* AppDelegate.swift in Sources */,
 				559DDAB821C7FA0100045FD3 /* Message.swift in Sources */,
-				55033AF721CEA9C40022D2B7 /* SplashViewController.swift in Sources */,
+				55033AF721CEA9C40022D2B7 /* StartViewController.swift in Sources */,
 				55D775DB21C4A24800B258C6 /* InputMessageViewModel.swift in Sources */,
 				DBC831E121C8CF280059B8D4 /* MessageTableViewModel.swift in Sources */,
 				559DDAB521C6A66300045FD3 /* ChatScreenViewModel.swift in Sources */,
