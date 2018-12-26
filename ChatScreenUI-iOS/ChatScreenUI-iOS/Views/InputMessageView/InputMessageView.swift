@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class InputMessageView: UIView {
+final class InputMessageView: UIView {
 
     @IBOutlet weak private var backgroundView: UIView!
     @IBOutlet weak private var contentView: UIView!

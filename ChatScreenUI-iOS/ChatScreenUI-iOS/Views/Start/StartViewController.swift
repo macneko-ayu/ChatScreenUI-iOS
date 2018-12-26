@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class StartViewController: UIViewController {
+final class StartViewController: UIViewController {
 
     @IBOutlet weak private var transitionButton: UIButton!
 

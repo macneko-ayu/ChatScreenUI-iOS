@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-class ChatScreenViewModel {
+final class ChatScreenViewModel {
 
     typealias Input = (
         inputtingText: Driver<String>,

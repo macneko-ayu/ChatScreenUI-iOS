@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-class InputMessageViewModel {
+final class InputMessageViewModel {
 
     let isInputtedMessage: Driver<Bool>
     let inputtedMessage = BehaviorRelay<String>(value: "")
