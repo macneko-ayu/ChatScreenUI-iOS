@@ -62,7 +62,7 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メッセージを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4h-1j-3ue">
-                                            <rect key="frame" x="10" y="6.5" width="295" height="17"/>
+                                            <rect key="frame" x="13" y="6.5" width="292" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                         <constraint firstAttribute="trailing" secondItem="A4h-1j-3ue" secondAttribute="trailing" constant="10" id="Hrc-lD-ctV"/>
                                         <constraint firstItem="A4h-1j-3ue" firstAttribute="centerY" secondItem="iL9-he-TJd" secondAttribute="centerY" id="Qww-DP-GKZ"/>
                                         <constraint firstItem="Dm6-FT-JR7" firstAttribute="leading" secondItem="iL9-he-TJd" secondAttribute="leading" id="W48-d4-Arz"/>
-                                        <constraint firstItem="A4h-1j-3ue" firstAttribute="leading" secondItem="iL9-he-TJd" secondAttribute="leading" constant="10" id="hKw-W4-IAK"/>
+                                        <constraint firstItem="A4h-1j-3ue" firstAttribute="leading" secondItem="iL9-he-TJd" secondAttribute="leading" constant="13" id="hKw-W4-IAK"/>
                                         <constraint firstAttribute="bottom" secondItem="Dm6-FT-JR7" secondAttribute="bottom" constant="6.5" id="kvS-H6-HVY"/>
                                         <constraint firstItem="Dm6-FT-JR7" firstAttribute="top" secondItem="iL9-he-TJd" secondAttribute="top" constant="6.5" id="xdk-be-WiT"/>
                                     </constraints>
