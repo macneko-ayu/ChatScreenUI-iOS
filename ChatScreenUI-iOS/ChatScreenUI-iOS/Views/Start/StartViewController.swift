@@ -1,5 +1,5 @@
 //
-//  SplashViewController.swift
+//  StartViewController.swift
 //  ChatScreenUI-iOS
 //
 //  Created by 横田孝次郎 on 2018/12/23.
@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SplashViewController: UIViewController {
+class StartViewController: UIViewController {
 
     @IBOutlet weak var transitionButton: UIButton!
 
