@@ -24,12 +24,12 @@ class TextMessageCell: UITableViewCell {
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
 
-    @IBOutlet private var initialContainerViewLeading: NSLayoutConstraint!
-    @IBOutlet private var initialContainerViewTrailing: NSLayoutConstraint!
-    @IBOutlet private var messageContainerViewLeading: NSLayoutConstraint!
-    @IBOutlet private var messageContainerViewTrailing: NSLayoutConstraint!
-    @IBOutlet private var timeLabelLeading: NSLayoutConstraint!
-    @IBOutlet private var timeLabelTrailing: NSLayoutConstraint!
+    @IBOutlet private weak var initialContainerViewLeading: NSLayoutConstraint!
+    @IBOutlet private weak var initialContainerViewTrailing: NSLayoutConstraint!
+    @IBOutlet private weak var messageContainerViewLeading: NSLayoutConstraint!
+    @IBOutlet private weak var messageContainerViewTrailing: NSLayoutConstraint!
+    @IBOutlet private weak var timeLabelLeading: NSLayoutConstraint!
+    @IBOutlet private weak var timeLabelTrailing: NSLayoutConstraint!
 
     static let nibName = "TextMessageCell"
     static let reuseIdentifier = "TextMessageCell"
