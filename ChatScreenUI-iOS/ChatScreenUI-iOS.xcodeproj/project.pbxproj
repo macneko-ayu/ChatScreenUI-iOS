@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55033AF321CEA9B50022D2B7 /* DependencyInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55033AF221CEA9B50022D2B7 /* DependencyInjectable.swift */; };
+		55033AF721CEA9C40022D2B7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55033AF521CEA9C40022D2B7 /* SplashViewController.swift */; };
+		55033AF821CEA9C40022D2B7 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55033AF621CEA9C40022D2B7 /* Splash.storyboard */; };
 		552952AD21BC038300430C9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552952AC21BC038300430C9A /* AppDelegate.swift */; };
 		552952AF21BC038300430C9A /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552952AE21BC038300430C9A /* ChatScreenViewController.swift */; };
 		552952B221BC038300430C9A /* ChatScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552952B021BC038300430C9A /* ChatScreen.storyboard */; };
@@ -21,8 +24,10 @@
 		55BC68B521BD14BC005AF31E /* InputMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BC68B421BD14BC005AF31E /* InputMessageView.xib */; };
 		55BC68B721BD14DC005AF31E /* InputMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC68B621BD14DC005AF31E /* InputMessageView.swift */; };
 		55D775DB21C4A24800B258C6 /* InputMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D775DA21C4A24800B258C6 /* InputMessageViewModel.swift */; };
+		55FEC88221CA924100ED70E9 /* TextMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FEC88121CA924100ED70E9 /* TextMessageCell.xib */; };
+		55FEC88421CA929500ED70E9 /* TextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEC88321CA929500ED70E9 /* TextMessageCell.swift */; };
 		DBC831DB21C88F180059B8D4 /* UserIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC831DA21C88F180059B8D4 /* UserIcon.swift */; };
-		DBC831E421C8EF530059B8D4 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC831E321C8EF530059B8D4 /* RxDataSources.framework */; };
+		DBC831E121C8CF280059B8D4 /* MessageTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC831E021C8CF280059B8D4 /* MessageTableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55033AF221CEA9B50022D2B7 /* DependencyInjectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjectable.swift; sourceTree = "<group>"; };
+		55033AF521CEA9C40022D2B7 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		55033AF621CEA9C40022D2B7 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		552952A921BC038300430C9A /* ChatScreenUI-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChatScreenUI-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		552952AC21BC038300430C9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		552952AE21BC038300430C9A /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +73,10 @@
 		55D775DA21C4A24800B258C6 /* InputMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputMessageViewModel.swift; path = ViewModels/InputMessageViewModel.swift; sourceTree = "<group>"; };
 		55E350AC21BCB42D00C2B153 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		55E350AF21BCBC0A00C2B153 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		55FEC88121CA924100ED70E9 /* TextMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextMessageCell.xib; sourceTree = "<group>"; };
+		55FEC88321CA929500ED70E9 /* TextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageCell.swift; sourceTree = "<group>"; };
 		DBC831DA21C88F180059B8D4 /* UserIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIcon.swift; sourceTree = "<group>"; };
+		DBC831E021C8CF280059B8D4 /* MessageTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageTableViewModel.swift; path = ViewModels/MessageTableViewModel.swift; sourceTree = "<group>"; };
 		DBC831E321C8EF530059B8D4 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC831E421C8EF530059B8D4 /* RxDataSources.framework in Frameworks */,
 				55BC68B021BCC6DD005AF31E /* RxCocoa.framework in Frameworks */,
 				55BC68AE21BCC6CE005AF31E /* RxSwift.framework in Frameworks */,
 			);
@@ -97,6 +107,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55033AF121CEA9B50022D2B7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				55033AF221CEA9B50022D2B7 /* DependencyInjectable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		55033AF421CEA9C40022D2B7 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				55033AF621CEA9C40022D2B7 /* Splash.storyboard */,
+				55033AF521CEA9C40022D2B7 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		552952A021BC038300430C9A = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +148,10 @@
 		552952AB21BC038300430C9A /* ChatScreenUI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				552952AC21BC038300430C9A /* AppDelegate.swift */,
+				55033AF121CEA9B50022D2B7 /* Protocol */,
 				559DDAB621C7F9E200045FD3 /* Models */,
 				55D775D921C4A22D00B258C6 /* ViewModels */,
-				552952AC21BC038300430C9A /* AppDelegate.swift */,
 				55BC68B221BD1462005AF31E /* Views */,
 				552952B321BC038500430C9A /* Assets.xcassets */,
 				552952B821BC038500430C9A /* Info.plist */,
@@ -162,8 +190,8 @@
 		55BC68B121BD1456005AF31E /* ChatScreen */ = {
 			isa = PBXGroup;
 			children = (
-				552952AE21BC038300430C9A /* ChatScreenViewController.swift */,
 				552952B021BC038300430C9A /* ChatScreen.storyboard */,
+				552952AE21BC038300430C9A /* ChatScreenViewController.swift */,
 			);
 			path = ChatScreen;
 			sourceTree = "<group>";
@@ -171,8 +199,10 @@
 		55BC68B221BD1462005AF31E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				55033AF421CEA9C40022D2B7 /* Splash */,
 				55BC68B121BD1456005AF31E /* ChatScreen */,
 				55BC68B321BD1494005AF31E /* InputMessageView */,
+				55FEC88021CA917F00ED70E9 /* TextMessageCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +221,7 @@
 			children = (
 				559DDAB421C6A66300045FD3 /* ChatScreenViewModel.swift */,
 				55D775DA21C4A24800B258C6 /* InputMessageViewModel.swift */,
+				DBC831E021C8CF280059B8D4 /* MessageTableViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -205,6 +236,15 @@
 				55E350AC21BCB42D00C2B153 /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55FEC88021CA917F00ED70E9 /* TextMessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				55FEC88121CA924100ED70E9 /* TextMessageCell.xib */,
+				55FEC88321CA929500ED70E9 /* TextMessageCell.swift */,
+			);
+			path = TextMessageCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +355,8 @@
 			files = (
 				552952B421BC038500430C9A /* Assets.xcassets in Resources */,
 				552952B221BC038300430C9A /* ChatScreen.storyboard in Resources */,
+				55FEC88221CA924100ED70E9 /* TextMessageCell.xib in Resources */,
+				55033AF821CEA9C40022D2B7 /* Splash.storyboard in Resources */,
 				55BC68B521BD14BC005AF31E /* InputMessageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +405,6 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -382,11 +423,15 @@
 			files = (
 				55BC68B721BD14DC005AF31E /* InputMessageView.swift in Sources */,
 				DBC831DB21C88F180059B8D4 /* UserIcon.swift in Sources */,
+				55FEC88421CA929500ED70E9 /* TextMessageCell.swift in Sources */,
 				552952AF21BC038300430C9A /* ChatScreenViewController.swift in Sources */,
 				552952AD21BC038300430C9A /* AppDelegate.swift in Sources */,
 				559DDAB821C7FA0100045FD3 /* Message.swift in Sources */,
+				55033AF721CEA9C40022D2B7 /* SplashViewController.swift in Sources */,
 				55D775DB21C4A24800B258C6 /* InputMessageViewModel.swift in Sources */,
+				DBC831E121C8CF280059B8D4 /* MessageTableViewModel.swift in Sources */,
 				559DDAB521C6A66300045FD3 /* ChatScreenViewModel.swift in Sources */,
+				55033AF321CEA9B50022D2B7 /* DependencyInjectable.swift in Sources */,
 				559DDABA21C7FD4100045FD3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

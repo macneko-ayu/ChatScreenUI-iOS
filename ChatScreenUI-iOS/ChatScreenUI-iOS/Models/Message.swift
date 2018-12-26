@@ -13,16 +13,20 @@ enum MessageKind {
 }
 
 struct Message {
-    let id: String
+    let id: Int
     let user: User
     let createdAt: Date
     let kind: MessageKind
 
-    init(id: String, user: User, createdAt: Date, kind: MessageKind) {
+    private init(id: Int, user: User, createdAt: Date, kind: MessageKind) {
         self.id = id
         self.user = user
         self.createdAt = createdAt
         self.kind = kind
+    }
+
+    init(id: Int, user: User, createdAt: Date, text: String) {
+        self.init(id: id, user: user, createdAt: createdAt, kind: .text(text))
     }
 }
 
