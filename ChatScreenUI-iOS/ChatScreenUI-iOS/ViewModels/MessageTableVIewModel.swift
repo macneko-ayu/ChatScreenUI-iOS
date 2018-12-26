@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-class MessageTableViewModel {
+final class MessageTableViewModel {
 
     typealias Input = (
         sendButtonTap: Driver<Void>,

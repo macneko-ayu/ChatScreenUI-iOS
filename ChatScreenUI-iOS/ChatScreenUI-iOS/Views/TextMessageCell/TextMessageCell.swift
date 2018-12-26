@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextMessageCell: UITableViewCell {
+final class TextMessageCell: UITableViewCell {
 
     @IBOutlet private weak var initialContainerView: UIView! {
         didSet {
