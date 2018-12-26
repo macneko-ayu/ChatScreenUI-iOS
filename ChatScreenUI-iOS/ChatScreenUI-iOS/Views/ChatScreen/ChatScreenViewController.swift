@@ -107,12 +107,14 @@ extension ChatScreenViewController {
                 let keyboardFrame = value.cgRectValue
                 self.inputViewBottom.constant = keyboardFrame.height
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.tableView.contentOffset = CGPoint(x: self.tableView.contentOffset.x,
-                                                           y: self.tableView.contentOffset.y + keyboardFrame.height)
+                    if self.inputMessageView.textView.text.count == 0 {
+                        self.tableView.contentOffset = CGPoint(x: self.tableView.contentOffset.x,
+                                                               y: self.tableView.contentOffset.y + keyboardFrame.height)
+                    }
                     self.view.layoutIfNeeded()
                 })
             })
-        .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
 
         NotificationCenter.default.rx.notification(UIResponder.keyboardWillHideNotification)
             .subscribe(onNext: { [weak self] _ in
@@ -136,7 +138,7 @@ extension ChatScreenViewController {
                 if messages.count > 0 {
                     self?.tableView.reloadData()
                     DispatchQueue.main.async {
-                        self?.tableView.scrollToRow(at: IndexPath(row: messages.count - 1, section: 0), at: .top, animated: false)
+                        self?.tableView.scrollToRow(at: IndexPath(row: messages.count - 1, section: 0), at: .bottom, animated: false)
                     }
                 }
             })
