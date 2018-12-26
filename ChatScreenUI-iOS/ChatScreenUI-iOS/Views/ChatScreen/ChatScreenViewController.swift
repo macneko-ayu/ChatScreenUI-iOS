@@ -26,7 +26,7 @@ final class ChatScreenViewController: UIViewController, DependencyInjectable {
     }
 
     @IBOutlet private weak var inputMessageView: InputMessageView!
-    @IBOutlet private weak var inputVIewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var inputViewHeight: NSLayoutConstraint!
     @IBOutlet private weak var inputViewBottom: NSLayoutConstraint!
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -73,7 +73,7 @@ extension ChatScreenViewController {
             self.inputMessageView.placeholderLabel.isHidden = isInputted
             if !isInputted {
                 let defaultInputViewHeight: CGFloat = 44
-                self.inputVIewHeight.constant = defaultInputViewHeight
+                self.inputViewHeight.constant = defaultInputViewHeight
             }
         })
         .disposed(by: disposeBag)
@@ -88,8 +88,8 @@ extension ChatScreenViewController {
                 let maxInputViewHeight: CGFloat = UIScreen.main.bounds.height / 4
                 let padding: CGFloat = 27
 
-                if self.inputVIewHeight.constant < maxInputViewHeight - padding {
-                    self.inputVIewHeight.constant = contentSizeHeight + padding
+                if self.inputViewHeight.constant < maxInputViewHeight - padding {
+                    self.inputViewHeight.constant = contentSizeHeight + padding
                     self.tableView.contentOffset = CGPoint(x: self.tableView.contentOffset.x,
                                                            y: self.tableView.contentOffset.y + padding)
                 }
