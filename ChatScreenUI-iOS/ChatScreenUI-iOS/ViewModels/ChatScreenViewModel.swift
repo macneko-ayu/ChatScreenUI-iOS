@@ -18,7 +18,7 @@ class ChatScreenViewModel {
 
     let inputMessageViewModel: InputMessageViewModel
     let messageTableViewModel: MessageTableViewModel
-    let users: [User]
+    private let users: [User]
 
     init(input: Input,
          dependency users: [User]) {

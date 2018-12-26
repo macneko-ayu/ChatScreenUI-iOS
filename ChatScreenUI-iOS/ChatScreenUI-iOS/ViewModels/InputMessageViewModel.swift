@@ -13,7 +13,7 @@ class InputMessageViewModel {
 
     let isInputtedMessage: Driver<Bool>
     let inputtedMessage = BehaviorRelay<String>(value: "")
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 
     init(input inputtingText: Driver<String>) {
         self.isInputtedMessage = inputtingText.map { $0.count > 0 }.asDriver()

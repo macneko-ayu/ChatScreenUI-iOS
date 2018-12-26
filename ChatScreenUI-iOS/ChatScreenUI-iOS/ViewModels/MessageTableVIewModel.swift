@@ -19,7 +19,7 @@ class MessageTableViewModel {
     private let _items = BehaviorRelay<[Message]>(value: [])
     let items: Observable<[Message]>
 
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 
     init(input: Input,
          dependency currentUser: User) {

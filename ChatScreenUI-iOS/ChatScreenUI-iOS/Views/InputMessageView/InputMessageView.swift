@@ -12,10 +12,10 @@ import RxCocoa
 
 class InputMessageView: UIView {
 
-    @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var roundView: UIView! {
+    @IBOutlet weak private var backgroundView: UIView!
+    @IBOutlet weak private var contentView: UIView!
+    @IBOutlet weak private var stackView: UIStackView!
+    @IBOutlet weak private var roundView: UIView! {
         didSet {
             roundView.layer.cornerRadius = 15
             roundView.layer.borderColor = UIColor.lightGray.cgColor
@@ -36,7 +36,7 @@ class InputMessageView: UIView {
     }
     @IBOutlet weak var placeholderLabel: UILabel!
 
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -63,7 +63,7 @@ extension InputMessageView {
         self.addSubview(view)
     }
 
-    func setupRx() {
+    private func setupRx() {
         sendButton.rx.tap.subscribe { [weak self] _ in
             self?.textView.text = ""
         }
