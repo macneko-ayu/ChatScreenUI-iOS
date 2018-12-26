@@ -10,32 +10,32 @@ import UIKit
 
 class TextMessageCell: UITableViewCell {
 
-    @IBOutlet weak var initialContainerView: UIView! {
+    @IBOutlet private weak var initialContainerView: UIView! {
         didSet {
             initialContainerView.layer.cornerRadius = cornerRadius
         }
     }
-    @IBOutlet weak var initialLabel: UILabel!
-    @IBOutlet weak var messageContaierView: UIView! {
+    @IBOutlet private weak var initialLabel: UILabel!
+    @IBOutlet private weak var messageContaierView: UIView! {
         didSet {
             messageContaierView.layer.cornerRadius = cornerRadius
         }
     }
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
 
-    @IBOutlet var initialContainerViewLeading: NSLayoutConstraint!
-    @IBOutlet var initialContainerViewTrailing: NSLayoutConstraint!
-    @IBOutlet var messageContainerViewLeading: NSLayoutConstraint!
-    @IBOutlet var messageContainerViewTrailing: NSLayoutConstraint!
-    @IBOutlet var timeLabelLeading: NSLayoutConstraint!
-    @IBOutlet var timeLabelTrailing: NSLayoutConstraint!
+    @IBOutlet private var initialContainerViewLeading: NSLayoutConstraint!
+    @IBOutlet private var initialContainerViewTrailing: NSLayoutConstraint!
+    @IBOutlet private var messageContainerViewLeading: NSLayoutConstraint!
+    @IBOutlet private var messageContainerViewTrailing: NSLayoutConstraint!
+    @IBOutlet private var timeLabelLeading: NSLayoutConstraint!
+    @IBOutlet private var timeLabelTrailing: NSLayoutConstraint!
 
     static let nibName = "TextMessageCell"
     static let reuseIdentifier = "TextMessageCell"
 
-    let cornerRadius: CGFloat = 15
-    let green = UIColor(red: 0, green: 200/255, blue: 0, alpha: 1)
+    private let cornerRadius: CGFloat = 15
+    private let green = UIColor(red: 0, green: 200/255, blue: 0, alpha: 1)
 
     static let defaultHeight: CGFloat = 44
 

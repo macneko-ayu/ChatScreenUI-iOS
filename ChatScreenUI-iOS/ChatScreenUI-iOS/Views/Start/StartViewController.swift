@@ -12,7 +12,7 @@ import RxCocoa
 
 class StartViewController: UIViewController {
 
-    @IBOutlet weak var transitionButton: UIButton!
+    @IBOutlet weak private var transitionButton: UIButton!
 
     private let disposeBag = DisposeBag()
 
