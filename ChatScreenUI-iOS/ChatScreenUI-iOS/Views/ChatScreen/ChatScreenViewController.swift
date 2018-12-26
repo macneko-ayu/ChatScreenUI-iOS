@@ -46,14 +46,14 @@ final class ChatScreenViewController: UIViewController, DependencyInjectable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Chat screen"
-        setupViewModel()
+        setupViewModelWithRx()
         setupRx()
     }
 }
 
 extension ChatScreenViewController {
 
-    private func setupViewModel() {
+    private func setupViewModelWithRx() {
         guard let textView = inputMessageView.textView,
             let sendButton = inputMessageView.sendButton else { return }
         let viewModel = ChatScreenViewModel(
@@ -64,20 +64,42 @@ extension ChatScreenViewController {
             dependency: users
         )
         self.viewModel = viewModel
+
+        self.viewModel?.inputMessageViewModel.isInputtedMessage
+            .drive(onNext: { [weak self] isInputted in
+                guard let self = self else { return }
+                self.inputMessageView.sendButton.isEnabled = isInputted
+                self.inputMessageView.placeholderLabel.isHidden = isInputted
+                if !isInputted {
+                    let defaultInputViewHeight: CGFloat = 44
+                    self.inputViewHeight.constant = defaultInputViewHeight
+                }
+            })
+            .disposed(by: disposeBag)
+
+        self.viewModel?.messageTableViewModel.items
+            .bind(to: tableView.rx.items(cellIdentifier: TextMessageCell.reuseIdentifier, cellType: TextMessageCell.self)) { [weak self] _, element, cell in
+                guard let currentUser = self?.viewModel?.currentUser() else { return }
+                cell.configure(message: element, isCurrentUser: element.user == currentUser)
+            }
+            .disposed(by: disposeBag)
+
+        self.viewModel?.messageTableViewModel.items.asDriver(onErrorJustReturn: [])
+            .drive(onNext: { [weak self] messages in
+                if messages.count > 0 {
+                    self?.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self?.tableView.scrollToRow(at: IndexPath(row: messages.count - 1, section: 0), at: .bottom, animated: false)
+                    }
+                }
+            })
+            .disposed(by: disposeBag)
+
+        // サンプル用にMockのメッセージ群を追加
+        self.viewModel?.messageTableViewModel.addMockMessages()
     }
 
     private func setupRx() {
-        self.viewModel?.inputMessageViewModel.isInputtedMessage.drive(onNext: { [weak self] isInputted in
-            guard let self = self else { return }
-            self.inputMessageView.sendButton.isEnabled = isInputted
-            self.inputMessageView.placeholderLabel.isHidden = isInputted
-            if !isInputted {
-                let defaultInputViewHeight: CGFloat = 44
-                self.inputViewHeight.constant = defaultInputViewHeight
-            }
-        })
-        .disposed(by: disposeBag)
-
         inputMessageView.textView.rx.observeWeakly(CGSize.self, "contentSize")
             .skip(1)
             .subscribe(onNext: { [weak self] contentSize in
@@ -125,26 +147,5 @@ extension ChatScreenViewController {
                 })
             })
             .disposed(by: disposeBag)
-
-        viewModel?.messageTableViewModel.items
-            .bind(to: tableView.rx.items(cellIdentifier: TextMessageCell.reuseIdentifier, cellType: TextMessageCell.self)) { [weak self] _, element, cell in
-                guard let currentUser = self?.viewModel?.currentUser() else { return }
-                cell.configure(message: element, isCurrentUser: element.user == currentUser)
-            }
-            .disposed(by: disposeBag)
-
-        viewModel?.messageTableViewModel.items.asDriver(onErrorJustReturn: [])
-            .drive(onNext: { [weak self] messages in
-                if messages.count > 0 {
-                    self?.tableView.reloadData()
-                    DispatchQueue.main.async {
-                        self?.tableView.scrollToRow(at: IndexPath(row: messages.count - 1, section: 0), at: .bottom, animated: false)
-                    }
-                }
-            })
-            .disposed(by: disposeBag)
-
-        // サンプル用にMockのメッセージ群を追加
-        viewModel?.messageTableViewModel.addMockMessages()
     }
 }
