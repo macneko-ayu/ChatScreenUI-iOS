@@ -61,10 +61,12 @@ extension ChatScreenViewController {
                 inputtingText: textView.rx.text.orEmpty.asDriver(),
                 sendButtonTap: sendButton.rx.tap.asDriver()
             ),
+            // TODO: dependencyという名前が気になる。適した名前がありそう
             dependency: users
         )
         self.viewModel = viewModel
 
+        // TODO: ViewModelの子はViewModel内でインターフェイスを用意したほうがいい
         self.viewModel?.inputMessageViewModel.isInputtedMessage
             .drive(onNext: { [weak self] isInputted in
                 guard let self = self else { return }

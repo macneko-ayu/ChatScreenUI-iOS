@@ -85,6 +85,7 @@ extension TextMessageCell {
             messageLabel.text = text
         }
 
+        // TODO: ViewModelでFormatするほうがいい
         let fomatter = DateFormatter()
         fomatter.locale = Locale(identifier: "ja_JP")
         fomatter.dateStyle = .medium
