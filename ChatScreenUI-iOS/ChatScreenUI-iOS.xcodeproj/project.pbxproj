@@ -19,6 +19,7 @@
 		559DDAB521C6A66300045FD3 /* ChatScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DDAB421C6A66300045FD3 /* ChatScreenViewModel.swift */; };
 		559DDAB821C7FA0100045FD3 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DDAB721C7FA0100045FD3 /* Message.swift */; };
 		559DDABA21C7FD4100045FD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DDAB921C7FD4100045FD3 /* User.swift */; };
+		55A2430D2365579F00A4D417 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A2430C2365579F00A4D417 /* RxRelay.framework */; };
 		55BC68AE21BCC6CE005AF31E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC68AD21BCC6CE005AF31E /* RxSwift.framework */; };
 		55BC68B021BCC6DD005AF31E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC68AF21BCC6DD005AF31E /* RxCocoa.framework */; };
 		55BC68B521BD14BC005AF31E /* InputMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BC68B421BD14BC005AF31E /* InputMessageView.xib */; };
@@ -66,6 +67,7 @@
 		559DDAB421C6A66300045FD3 /* ChatScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatScreenViewModel.swift; path = ViewModels/ChatScreenViewModel.swift; sourceTree = "<group>"; };
 		559DDAB721C7FA0100045FD3 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		559DDAB921C7FD4100045FD3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		55A2430C2365579F00A4D417 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		55BC68AD21BCC6CE005AF31E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		55BC68AF21BCC6DD005AF31E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		55BC68B421BD14BC005AF31E /* InputMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputMessageView.xib; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			files = (
 				55BC68B021BCC6DD005AF31E /* RxCocoa.framework in Frameworks */,
 				55BC68AE21BCC6CE005AF31E /* RxSwift.framework in Frameworks */,
+				55A2430D2365579F00A4D417 /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +232,7 @@
 		55E350AB21BCB42D00C2B153 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55A2430C2365579F00A4D417 /* RxRelay.framework */,
 				DBC831E321C8EF530059B8D4 /* RxDataSources.framework */,
 				55BC68AF21BCC6DD005AF31E /* RxCocoa.framework */,
 				55BC68AD21BCC6CE005AF31E /* RxSwift.framework */,
@@ -405,6 +409,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -613,7 +618,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.macneko.ChatScreenUI-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -636,7 +641,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.macneko.ChatScreenUI-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
