@@ -19,9 +19,6 @@
 		559DDAB521C6A66300045FD3 /* ChatScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DDAB421C6A66300045FD3 /* ChatScreenViewModel.swift */; };
 		559DDAB821C7FA0100045FD3 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DDAB721C7FA0100045FD3 /* Message.swift */; };
 		559DDABA21C7FD4100045FD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DDAB921C7FD4100045FD3 /* User.swift */; };
-		55A2430D2365579F00A4D417 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A2430C2365579F00A4D417 /* RxRelay.framework */; };
-		55BC68AE21BCC6CE005AF31E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC68AD21BCC6CE005AF31E /* RxSwift.framework */; };
-		55BC68B021BCC6DD005AF31E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC68AF21BCC6DD005AF31E /* RxCocoa.framework */; };
 		55BC68B521BD14BC005AF31E /* InputMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BC68B421BD14BC005AF31E /* InputMessageView.xib */; };
 		55BC68B721BD14DC005AF31E /* InputMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC68B621BD14DC005AF31E /* InputMessageView.swift */; };
 		55D775DB21C4A24800B258C6 /* InputMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D775DA21C4A24800B258C6 /* InputMessageViewModel.swift */; };
@@ -87,9 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55BC68B021BCC6DD005AF31E /* RxCocoa.framework in Frameworks */,
-				55BC68AE21BCC6CE005AF31E /* RxSwift.framework in Frameworks */,
-				55A2430D2365579F00A4D417 /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +256,6 @@
 				552952A621BC038300430C9A /* Frameworks */,
 				552952A721BC038300430C9A /* Resources */,
 				559DDAB121C698CB00045FD3 /* ShellScript */,
-				55E350AE21BCB45100C2B153 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -400,26 +393,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		55E350AE21BCB45100C2B153 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -608,10 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FZSDA66L9;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ChatScreenUI-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -631,10 +601,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FZSDA66L9;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ChatScreenUI-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
