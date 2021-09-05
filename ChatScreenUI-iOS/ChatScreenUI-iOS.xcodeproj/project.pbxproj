@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		55033AF321CEA9B50022D2B7 /* DependencyInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55033AF221CEA9B50022D2B7 /* DependencyInjectable.swift */; };
 		55033AF721CEA9C40022D2B7 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55033AF521CEA9C40022D2B7 /* StartViewController.swift */; };
 		55033AF821CEA9C40022D2B7 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55033AF621CEA9C40022D2B7 /* Start.storyboard */; };
+		550A1CFC26E4D2CF009FFCD1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 550A1CFB26E4D2CF009FFCD1 /* RxCocoa */; };
+		550A1CFE26E4D2CF009FFCD1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 550A1CFD26E4D2CF009FFCD1 /* RxSwift */; };
 		552952AD21BC038300430C9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552952AC21BC038300430C9A /* AppDelegate.swift */; };
 		552952AF21BC038300430C9A /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552952AE21BC038300430C9A /* ChatScreenViewController.swift */; };
 		552952B221BC038300430C9A /* ChatScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552952B021BC038300430C9A /* ChatScreen.storyboard */; };
@@ -84,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550A1CFE26E4D2CF009FFCD1 /* RxSwift in Frameworks */,
+				550A1CFC26E4D2CF009FFCD1 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +266,10 @@
 			dependencies = (
 			);
 			name = "ChatScreenUI-iOS";
+			packageProductDependencies = (
+				550A1CFB26E4D2CF009FFCD1 /* RxCocoa */,
+				550A1CFD26E4D2CF009FFCD1 /* RxSwift */,
+			);
 			productName = "ChatScreenUI-iOS";
 			productReference = 552952A921BC038300430C9A /* ChatScreenUI-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -336,6 +344,9 @@
 				Base,
 			);
 			mainGroup = 552952A021BC038300430C9A;
+			packageReferences = (
+				550A1CFA26E4D2CF009FFCD1 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 552952AA21BC038300430C9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -737,6 +748,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		550A1CFA26E4D2CF009FFCD1 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		550A1CFB26E4D2CF009FFCD1 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 550A1CFA26E4D2CF009FFCD1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		550A1CFD26E4D2CF009FFCD1 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 550A1CFA26E4D2CF009FFCD1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 552952A121BC038300430C9A /* Project object */;
 }
